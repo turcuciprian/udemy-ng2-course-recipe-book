@@ -7,7 +7,7 @@ import { Recipe } from '../recipe';
 })
 export class RecipesListComponent implements OnInit {
   recipes: Recipe[];
-  recipeSelected = new EventEmitter<Recipe>();
+  @Output() recipeSelected = new EventEmitter<Recipe>();
   @Output() recipe = new Recipe('Elon Musk', 'musk', 'http://cuulgeek.com.ng/wp-content/uploads/2016/09/Elon-Musk.jpg');
 
   constructor() { }
